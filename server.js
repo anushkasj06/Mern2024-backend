@@ -10,9 +10,10 @@ const connectDb = require("./utlis/db");
 const errorMiddleware = require('./middlewares/error-middleware');
 
 const corsOptions = {
-    origin:"http://localhost:5173",
+    origin:"https://mern2024-frontend-1.onrender.com",
     methods:"GET, POST, PUT, DELETE, PATCH, HEAD",
     Credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 app.use(cors(corsOptions));
